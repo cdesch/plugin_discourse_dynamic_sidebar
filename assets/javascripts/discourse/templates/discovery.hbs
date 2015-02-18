@@ -17,6 +17,7 @@
 {{else}}
   <div {{bind-attr class=":container :list-container loading:hidden"}}>
 {{/if}}
+
     <div class="row">
         <div class="full-width">
             <div id='header-list-area'>
@@ -29,15 +30,20 @@
             <div id='list-area'>
               {{outlet "list-container"}}
             </div>
+
         </div>
+
     </div>
-</div>
 
 
 </div>
 {{#if Discourse.SiteSettings.active}}
-  <div class='sidebar'>
-    {{{Discourse.SiteSettings.sidebar_content}}}
-  </div>
+        <div {{bind-attr class=":sidebar"}}>
+            <p>dfdsfs</p>
+          {{{Discourse.SiteSettings.sidebar_content}}}
+        </div>
 {{/if}}
+
+
+
 
